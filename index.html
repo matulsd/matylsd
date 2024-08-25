@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400&display=swap');
+
+        body {
+            background-color: #f8e1f4;
+            color: #4e003e;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+            border: 2px solid #ff8bbd;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.8em;
+            color: #ff007f;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease;
+        }
+
+        button {
+            background-color: #ff66b2;
+            background-image: linear-gradient(145deg, #ff3388, #ff99cc);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(255, 0, 102, 0.6);
+        }
+
+        #frase {
+            margin-top: 40px;
+            font-size: 1.3em;
+            display: none;
+            color: #a2005a;
+            line-height: 1.5em;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .show {
+            display: block;
+        }
+
+        /* Estilos específicos para dispositivos móviles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            button {
+                padding: 12px 24px;
+                font-size: 1em;
+            }
+
+            #frase {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Elementos decorativos */
+        .decoration {
+            position: absolute;
+            animation: fadeIn 2s ease-out infinite alternate;
+        }
+
+        .rose {
+            width: 50px;
+            height: 50px;
+            background-image: url('https://example.com/rose.png'); /* Imagen de rosa */
+            background-size: cover;
+            left: 10px;
+            bottom: 20px;
+            transform: rotate(-20deg);
+        }
+
+        .bear {
+            width: 70px;
+            height: 70px;
+            background-image: url('https://example.com/bear.png'); /* Imagen de osito */
+            background-size: cover;
+            right: 15px;
+            top: 25px;
+            transform: rotate(15deg);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola mi Wawa hermosa</h1>
+        <button onclick="mostrarFrase()">Aprieta aquí</button>
+        <div id="frase">
+            Esta página fue hecha para recordarte lo mucho que te amo. 
+            Cada vez que entres aquí, quiero que sepas que siempre vamos a salir adelante juntos, 
+            sin importar lo que pase. Te prometo que siempre te daré lo mejor de mí, amor. 
+            Eres mi inspiración, mi alegría y mi todo. ❤️
+        </div>
+    </div>
+
+    <!-- Elementos decorativos -->
+    <div class="decoration rose"></div>
+    <div class="decoration bear"></div>
+
+    <script>
+        function mostrarFrase() {
+            const frase = document.getElementById('frase');
+            frase.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
